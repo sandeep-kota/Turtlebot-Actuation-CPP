@@ -1,0 +1,13 @@
+<launch>
+  <arg name= "rosbagRecorder" default= "false"/>
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+    <arg name="world_file" value="$(find turtlebot_walker)/world/HW_12_env.world"/> 
+  </include>
+
+ <node pkg= "turtlebot_walker" name= "turtlebot_walker" type= "walker" output="screen"/>
+
+  <node pkg= "rosbag" name= "record_bag" type= "record"	args = "--duration=15 -a -O $(find turtlebot_walker)/results/recorder.bag -x (.*)/camera/(.*)" if = "$(arg rosbagRecorder)"
+	/>
+
+</launch>
+
