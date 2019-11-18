@@ -17,7 +17,7 @@ This package has been tested in a system with following dependencies.
 - Gazebo 7+
 - Turtlebot simulator
 
-## Build nstructions
+## Build Instructions
 
 1) To install ROS-Kinetic follow the steps mentioned in the official website (http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
