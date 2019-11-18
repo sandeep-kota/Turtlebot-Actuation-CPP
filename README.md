@@ -55,7 +55,7 @@ A window similar to this hould open if the instructions are followed properly.
 		<img src = "./results/1.png"	>
 	</p>
 
-2) To replay the recorded rosbag file, we will execute the `rosbag play	` command.
+2) To replay the recorded rosbag file, we will execute the `rosbag play	` command. It is to be noted that all existing terminals should be closed before running the `rosbag` play command. To close a terminal window press`CTRL+C` in that window.
 ```
 # Run roscore in a separate terminal
 roscore
