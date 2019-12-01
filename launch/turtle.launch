@@ -4,8 +4,12 @@
     <arg name="world_file" value="$(find turtlebot_walker)/world/HW_12_env.world"/> 
   </include>
 
- <node pkg= "turtlebot_walker" name= "turtlebot_walker" type= "walker" output="screen"/>
+  <include file="$(find turtlebot_gazebo)/launch/gmapping_demo.launch"/>
+  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
 
+
+ <node pkg= "turtlebot_walker" name= "turtlebot_walker" type= "walker" output="screen"/>
+ 
   <node pkg= "rosbag" name= "record_bag" type= "record"	args = "--duration=15 -a -O $(find turtlebot_walker)/results/recorder.bag -x (.*)/camera/(.*)" if = "$(arg rosbagRecorder)"
 	/>
 
